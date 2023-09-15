@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS styles -->
+    <style>
+        /* Style your website here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff69b4;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #ff4880;
+        }
+
+        section {
+            padding: 2rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        /* Testimonial styles */
+        .testimonial-card {
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            color: #333;
+        }
+    </style>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("contactButton").addEventListener("click", function () {
+                window.open("https://wa.me/phone number", "_blank");
+               
+
+            });
+
+            // Testimonials data
+            const testimonials = [
+                {
+                    name: "shweta",
+                    content: "Thanks to Women's Power, I learned valuable digital marketing skills and now run my online business successfully."
+                },
+                {
+                    name: "lakshmi",
+                    content: "I can't believe how much my income has increased since joining Women's Power. The training is fantastic!"
+                },
+                {
+                    name: "aarti",
+                    content: "Women's Power helped me gain confidence in the digital world. I'm now a freelance digital marketer and loving it!"
+                },
+            ];
+
+            // Display testimonials
+            const testimonialsContainer = document.getElementById("testimonials");
+            testimonials.forEach((testimonial, index) => {
+                const testimonialCard = document.createElement("div");
+                testimonialCard.classList.add("testimonial-card");
+                testimonialCard.innerHTML = `
+                    <p>${testimonial.content}</p>
+                    <p>- ${testimonial.name}</p>
+                `;
+                testimonialsContainer.appendChild(testimonialCard);
+            });
+
+            // Button click events
+            document.getElementById("servicesButton").addEventListener("click", function () {
+                // Replace with your services page URL
+                window.location.href = "services.html";
+            });
+
+            document.getElementById("blogButton").addEventListener("click", function () {
+                // Replace with your blog page URL
+                window.location.href = "blog.html";
+            });
+
+            document.getElementById("contactUsButton").addEventListener("click", function () {
+                // Replace with your contact us page URL
+                window.location.href = "contact.html";
+            });
+        });
+    </script>
+    
+    <title>Women's Power - Chlo Kuchh Nya Seekhte Hai</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Women's Power</h1>
+        <p>A platform for women to empower themselves digitally(chlo ladkiyo kuchh naya sikhte hai)</p>
+        <button id="contactButton">Contact Us on WhatsApp</button>
+        <button id="servicesButton">Services</button>
+        <button id="blogButton">Blog</button>
+        <button id="contactUsButton">Contact Us</button>
+    </header>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p> A housewife turned digital marketer, is dedicated to empowering women through digital skills and expertise. She has helped numerous women earn well by harnessing the power of the internet.</p>
+    </section>
+
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <!-- Testimonial cards will be added here dynamically using JavaScript -->
+    </section>
+
+    <section id="certificates">
+        <h2>Certificates</h2>
+        <!-- Add a section for displaying certificates here -->
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Women's Power</p>
+    </footer>
+</body>
+</html>
